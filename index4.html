@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Changer</title>
+</head>
+<body>
+    <div style=" display:flex;justify-content:column;align-items: center;">
+  <div id="pic" 
+     style="height:100px;
+            width:100px; 
+            border:5px solid black; 
+            background-size:cover;
+            background-image:url('https://imgs.search.brave.com/bB42EJI7NBCTZyxkm0ZXeyHtj0EihNjskS5g7YLzpCU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY29v/bC1wcm9maWxlLXBp/Y3R1cmVzLXBhbmRh/LW1hbi1nc2wybnRr/amozaHJrODRzLmpw/Zw');
+            padding-bottom: 700px;padding-left: 700px;"
+            >
+</div>
+  <button onclick="change()" style="margin-top: 20px;margin-left:20px;height:50px">CHANGE</button>
+  </div>
+
+  <script>
+    let i = 0;
+    let arr = [
+      "https://imgs.search.brave.com/z8AFT3XPGbZapdrqa3DEUt2ThsdoYYi7TUKK_s5kT5o/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY29v/bC1za3VsbC1wcm9m/aWxlLXBpY3R1cmUt/ajZyNzhwbzZ4dXV0/b244NS5qcGc",
+      "https://imgs.search.brave.com/kgE_RJyBQEy0CGLHR9pvlAs335anSrJFNB5PQYltVw0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY29v/bC1wcm9maWxlLXBp/Y3R1cmUtbTMycnF3/bTZ6emYxb3NveC5q/cGc",
+      "https://imgs.search.brave.com/bB42EJI7NBCTZyxkm0ZXeyHtj0EihNjskS5g7YLzpCU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY29v/bC1wcm9maWxlLXBp/Y3R1cmVzLXBhbmRh/LW1hbi1nc2wybnRr/amozaHJrODRzLmpw/Zw"
+    ];
+
+    function change() {
+      i = (i + 1) % arr.length;
+      document.getElementById("pic").style.backgroundImage = `url(${arr[i]})`;
+    }
+  </script>
+</body>
+</html>

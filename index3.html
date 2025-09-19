@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+</head>
+<body>
+  <div style="align-items:center;padding:100px">
+    <div>
+      <img src="https://imgs.search.brave.com/DxSSvm4BzFL9nNO6Q2_CiAGDTqOXAfa-n_dGIsCXDto/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Z0Y2RuLm5l/dC9pbWFnZXMvdF9h/cHAtaWNvbi1zL3Av/Yzc3NGFhNWMtNjY0/MS00OTgxLWFkZDgt/NWE2MTk1MDM2YmQy/LzE4Njk0MDY0NTAv/Y291bnRlci1jbGlj/ay1jb3VudGVyLWFw/cC10YWxseS1jb3Vu/dGVyLXdpZGdldHMt/bG9nbw" style="height: 50px; width:50px">
+      <p>Counter App</p>
+    </div>
+
+    <div style="border-radius:100%; background-color: yellow; height:100px; width:100px; display:flex; justify-content:center; align-items:center;">
+      <p id="value" style="color: blue; font-size: 24px;">0</p>
+    </div>
+
+    <div style="display:flex; gap:10px; margin-top:20px;">
+      <button onclick="addup()">+</button>
+      <button onclick="subtract()">-</button>
+    </div>
+  </div>
+
+  <script>
+    function addup() {
+      let val = document.getElementById("value").innerHTML;
+
+      
+      if (val === "min limit" || val==="NaN") {
+        document.getElementById("value").innerHTML = 0;
+        return;
+      }
+
+      let x = parseInt(val);
+      if (x < 10) {
+        document.getElementById("value").innerHTML = x + 1;
+      } else {
+        document.getElementById("value").innerHTML = "max limit";
+      }
+    }
+
+    function subtract() {
+      let val = document.getElementById("value").innerHTML;
+
+    
+      if (val === "max limit" || val==="NaN") {
+        document.getElementById("value").innerHTML = 10;
+        return;
+      }
+
+      let x = parseInt(val);
+      if (x <= 0) {
+        document.getElementById("value").innerHTML = "min limit";
+      } else {
+        document.getElementById("value").innerHTML = x - 1;
+      }
+    }
+  </script>
+</body>
+</html>
