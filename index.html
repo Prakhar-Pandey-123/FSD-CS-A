@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <div>
-        Hi
+    <div id="adi" style="width: 100px; background-color:black; height: 100px;">
+        <button onclick="abc()">click</button>
+        <p id="aaa" style="color: yellow;"> </p>
     </div>
+    <script>
+        function abc(){
+            document.getElementById("aaa").innerHTML="<h3>HELLO</h3>";
+        }
+    </script>
 </body>
 </html>
