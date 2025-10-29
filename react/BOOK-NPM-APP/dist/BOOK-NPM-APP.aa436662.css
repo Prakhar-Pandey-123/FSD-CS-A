@@ -1,0 +1,14 @@
+.parent {
+  margin: "10px";
+  justify-content: row;
+  padding: "10px";
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.book {
+  background-color: #00f;
+  border: 3px solid #000;
+}
+/*# sourceMappingURL=BOOK-NPM-APP.aa436662.css.map */
