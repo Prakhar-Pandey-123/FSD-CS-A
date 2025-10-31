@@ -1,8 +1,10 @@
 import React from "react"
 import Book from "./component/Book"
 import "./App.css"
+import {useState} from "react"
 
 const App=()=>{
+  const [count,setCount]=useState(0);
   const data=[{
     title:"Physics",
     price:"450"
@@ -25,6 +27,13 @@ const App=()=>{
       ))
     }
     </div>
+
+    <div className="counter">
+    <button onClick={()=>setCount(count+1)}>+</button>
+    <div>{count}</div>
+    <button onClick={()=>setCount(count-1)}>-</button>
+    </div>
+
     </div>
   )
 }

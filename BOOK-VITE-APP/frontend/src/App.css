@@ -24,3 +24,10 @@
   height:20px;
   color:aqua
 }
+.counter{
+  padding-top: 50px;
+  width:10%;
+  display:flex;
+  align-items:center;
+  justify-content:space-around
+}
